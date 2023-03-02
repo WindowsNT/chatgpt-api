@@ -28,7 +28,6 @@ Example code now:
     auto off = c.Image("White cat");
     auto& r = off.value();
     // r.data has the PNG data of the cat
-    }
 ```
 
 # Summary 
