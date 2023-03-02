@@ -13,21 +13,20 @@ This is code to use chatgpt API in Windows.
 
 Example code now:
 ```
-    CHATGPT_API c("your_api_key");
-    auto off = c.Text("What is your name?");
-    auto& r = off.value();
-    std::cout << r.t << std::endl;
-    }
+CHATGPT_API c("your_api_key");
+auto off = c.Text("What is your name?");
+auto& r = off.value();
+std::cout << r.t << std::endl;
 ```
 
 # Image generation
 
 Example code now:
 ```
-    CHATGPT_API c("your_api_key");
-    auto off = c.Image("White cat");
-    auto& r = off.value();
-    // r.data has the PNG data of the cat
+CHATGPT_API c("your_api_key");
+auto off = c.Image("White cat");
+auto& r = off.value();
+// r.data has the PNG data of the cat
 ```
 
 # Summary 
@@ -46,4 +45,4 @@ std::optional<CHATGPT_RESULT> Image(const char* prompt,int wi = 512,int he = 512
 ```
 
 
-
+More to be implemented soon!
