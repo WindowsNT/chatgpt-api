@@ -9,7 +9,7 @@ This is code to use chatgpt API in Windows.
 * Include "chatgpt.hpp" in your Win32 code
 * Read and decide which models to use https://platform.openai.com/docs/models/overview. 
 
-# Text completion
+# Text generation
 
 Example code now:
 ```
@@ -19,6 +19,20 @@ Example code now:
     std::cout << r.t << std::endl;
     }
 ```
+
+# Image generation
+
+Example code now:
+```
+    CHATGPT_API c("your_api_key");
+    auto off = c.Image("White cat");
+    auto& r = off.value();
+    // r.data has the PNG data of the cat
+    }
+```
+
+# Summary 
+
 * API keys cost, remember to pick the correct one for your application.
 * Currently, in the library, these functions are implemented:
 
@@ -27,6 +41,9 @@ std::optional<CHATGPT_RESULT> Text(const char* prompt, int Temperature = 0, int 
 // Accepts input, temperature (the smaller, the least random results), max tokens to use.
 void SetModel(const char* model);
 // Sets the model to use
+
+std::optional<CHATGPT_RESULT> Image(const char* prompt,int wi = 512,int he = 512); // max is 1024x1024, can be also 256x256
+// Accepts a prompt and returns the image as raw PNG data
 ```
 
 
