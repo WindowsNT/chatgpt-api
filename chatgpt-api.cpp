@@ -16,7 +16,7 @@ int main()
 {
     WSADATA w = {};
     WSAStartup(MAKEWORD(2, 2), &w);
-    CHATGPT_API c("your_api_key");
+    CHATGPT_API c("Your_API_Key");
     c.SetModel("code-davinci-002");
     for (;;)
     {  
