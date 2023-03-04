@@ -1,6 +1,6 @@
 # chat-gpt API for Win32
 
-A very simple single-header library to use chatgpt API in Windows.
+A very simple single-header library to use chatgpt API in Windows. Just include chatgpt.hpp somewhere and you are set.
 
 # Preparation
 
