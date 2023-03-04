@@ -1,14 +1,3 @@
-#include <iostream>
-#include <Windows.h>
-#include <wininet.h>
-#include <vector>
-#include <optional>
-#include <string>
-#include <sstream>
-#include <map>
-#include <memory>
-#pragma comment(lib,"ws2_32.lib")
-#pragma comment(lib,"wininet.lib")
 
 #include "chatgpt.hpp"
 
