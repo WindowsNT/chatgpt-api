@@ -11,7 +11,7 @@ This is code to use chatgpt API in Windows.
 
 # Text generation
 
-Example code now:
+Example code:
 ```
 CHATGPT_API c("your_api_key");
 auto off = c.Text("What is your name?");
@@ -29,7 +29,7 @@ Code models are free at this beta stage of the API.
 
 # Image generation
 
-Example code now:
+Example code:
 ```
 CHATGPT_API c("your_api_key");
 auto off = c.Image("White cat");
@@ -43,14 +43,14 @@ auto& r = off.value();
 * Currently, in the library, these functions are implemented:
 
 ```
-std::optional<CHATGPT_RESULT> **Text**(const char* prompt, int Temperature = 0, int max_tokens = 10);
+// Sets the model to use for text generation
+void SetModel(const char* model);
+
 // Accepts input, temperature (the smaller, the least random results), max tokens to use.
+std::optional<CHATGPT_RESULT> **Text**(const char* prompt, int Temperature = 0, int max_tokens = 100);
 
-void **SetModel**(const char* model);
-// Sets the model to use
-
-std::optional<CHATGPT_RESULT> **Image**(const char* prompt,int wi = 512,int he = 512); // max is 1024x1024, can be also 256x256
 // Accepts a prompt and returns the image as raw PNG data
+std::optional<CHATGPT_RESULT> Image(const char* prompt,int wi = 1024,int he = 1024); // can be also 512x512 or 256x256
 ```
 
 For example, this simple cpp is included in the repo:

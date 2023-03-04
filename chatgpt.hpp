@@ -92,7 +92,7 @@ public:
         return auth;
     }
 
-    std::optional<CHATGPT_RESULT> Image(const char* prompt,int wi = 512,int he = 512)
+    std::optional<CHATGPT_RESULT> Image(const char* prompt,int wi = 1024,int he = 1024)
     {
         std::vector<char> data(10000);
         sprintf_s(data.data(), 10000, R"({
@@ -130,7 +130,7 @@ public:
         return {};
     }
 
-    std::optional<CHATGPT_RESULT> Text(const char* prompt, int Temperature = 0, int max_tokens = 10)
+    std::optional<CHATGPT_RESULT> Text(const char* prompt, int Temperature = 0, int max_tokens = 100)
     {
         std::vector<char> data(10000);
         sprintf_s(data.data(), 10000, R"({
