@@ -1,6 +1,6 @@
 # chat-gpt API for Win32
 
-This is code to use chatgpt API in Windows.
+A very simple single-header library to use chatgpt API in Windows.
 
 # Preparation
 
@@ -47,7 +47,7 @@ auto& r = off.value();
 void SetModel(const char* model);
 
 // Accepts input, temperature (the smaller, the least random results), max tokens to use.
-std::optional<CHATGPT_RESULT> **Text**(const char* prompt, int Temperature = 0, int max_tokens = 100);
+std::optional<CHATGPT_RESULT> Text(const char* prompt, int Temperature = 0, int max_tokens = 100);
 
 // Accepts a prompt and returns the image as raw PNG data
 std::optional<CHATGPT_RESULT> Image(const char* prompt,int wi = 1024,int he = 1024); // can be also 512x512 or 256x256
