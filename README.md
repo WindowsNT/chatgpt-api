@@ -1,7 +1,9 @@
 # chat-gpt API for Win32
 
 A very simple single-header library to use chatgpt API in Windows. Just include **chatgpt.hpp** somewhere and you are set.
+
 I describe more details in the CodeProject article: https://www.codeproject.com/Articles/5355950/ChatGPT-API-for-Windows-Use-ChatGPT-in-your-Window
+
 I use this API in my full scale video/audio sequencer: https://www.turbo-play.com
 
 # Preparation
